@@ -13,8 +13,8 @@
 
 colwash    lda color+$00      ; load first color
            sta color+$28      ; store in column 40 ($28 = #40) - this resets the table for the next color cycle
+           ldx #$00           ; init counter
            sta $d9df,x
-           ldx #$00           ; init loop
 cycle1     lda color+$01,x    ; CYCLE iterates once(!) by moving color by 1 in table
            sta color+$00,x 
            lda color,x        ; load current color
