@@ -3,7 +3,7 @@
 ;============================================================
 
 
-init_text  ldx $00          ; init X-Register with $00
+init_text  ldx #$00          ; init X-Register with $00
 loop_text  lda line1,x      ; read characters from line1 table of text...
            sta $0590,x      ; ...and store in screen ram near the center
            lda line2,x      ; read characters from line1 table of text...
