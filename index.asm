@@ -1,16 +1,16 @@
 ;============================================================
-; Example Project for C64 Tutorials from 
+; Example Project for C64 Tutorials  
 ; Code by actraiser/Dustlayer
 ; Music: Ikari Intro by Laxity
 ;
 ; Simple Colorwash effect with a SID playing
 ;
-; http://www.dustlayer.com
-; 
+; Tutorial: http://dustlayer.com/c64-coding-tutorials/2013/2/17/a-simple-c64-intro
+; Dustlayer WHQ: http://dustlayer.com
 ;============================================================
 
 ;============================================================
-; index file which loads all source code and resources files
+; index file which loads all source code and resource files
 ;============================================================
 
 ;============================================================
