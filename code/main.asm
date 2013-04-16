@@ -17,6 +17,10 @@
            lda #$01    ; Set Interrupt Request Mask...
            sta $d01a   ; ...we want IRQ by Rasterbeam (%00000001)
 
+           lda $d011   ; Bit#0 of $d011 indicates if we have passed line 255 on the screen
+           and #$7f    ; it is basically the 9th Bit for $d012
+           sta $d011   ; we need to make sure it is set to zero for our intro.
+
            lda #<irq   ; point IRQ Vector to our custom irq routine
            ldx #>irq 
            sta $314    ; store in $314/$315
