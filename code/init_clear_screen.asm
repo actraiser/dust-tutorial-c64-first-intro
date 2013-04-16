@@ -12,8 +12,8 @@ clear            lda #$20     ; #$20 is the spacebar screencode
                  sta $0500,x 
                  sta $0600,x 
                  sta $06e8,x 
-                 lda #$0c     ; puts into the associated color ram dark grey ($0c)...
-                 sta $d800,x  ; and this will become color of the scroll text
+                 lda #$00     ; puts black into the associated Color Ram ..
+                 sta $d800,x  
                  sta $d900,x
                  sta $da00,x
                  sta $dae8,x
