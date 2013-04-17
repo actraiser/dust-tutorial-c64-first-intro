@@ -17,6 +17,7 @@ clear            lda #$20     ; #$20 is the spacebar Screen Code
                  sta $d900,x
                  sta $da00,x
                  sta $dae8,x
-                 inx         
-                 bne clear   
-                 rts 
+                 inx           ; increment X
+                 bne clear     ; did X turned to zero yet?
+                               ; if not, continue with the loop
+                 rts           ; return from this subroutine
