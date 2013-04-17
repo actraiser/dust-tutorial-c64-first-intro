@@ -5,7 +5,7 @@
 colwash    lda color+$00      ; load the current first color from table
            sta color+$28      ; store in in last position of table to reset the cycle
            ldx #$00           ; init X with zero
-           sta $d9df,x        ; put the current color code into Color RAM position + X
+
 cycle1     lda color+1,x      ; Start cycle by fetching next color in the table...
            sta color,x        ; ...and store it in the current active position.
            sta $d990,x        ; put into Color Ram
