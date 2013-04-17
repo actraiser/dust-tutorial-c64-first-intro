@@ -4,8 +4,8 @@
 ;============================================================
 
 init_screen      ldx #$00     ; set X to zero (black color code)
-                 stx $d021    ; set border color
-                 stx $d020    ; set background color
+                 stx $d021    ; set background color
+                 stx $d020    ; set border color
 
 clear            lda #$20     ; #$20 is the spacebar Screen Code
                  sta $0400,x  ; fill four areas with 256 spacebar characters
