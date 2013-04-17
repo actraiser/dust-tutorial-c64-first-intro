@@ -2,15 +2,6 @@
 ; color washer routine
 ;============================================================
 
-
-; during the control of the color washing routine, 
-; we take the byte, which is at color+00 and then 
-; we place it at color+$28, then we call a continuous loop 
-; which makes the data table cycle by subtracting each piece of data in the data table by one
-; and read the calculations 40 times ($28). Therefore the data table pulls each byte of data. 
-; Also inside our loop, the colors are read from the data table and put into color RAM, 
-; which starts at $D800.
-
 colwash    lda color+$00      ; load first color
            sta color+$28      ; store in column 40 ($28 = #40) - this resets the table for the next color cycle
            ldx #$00           ; init counter
