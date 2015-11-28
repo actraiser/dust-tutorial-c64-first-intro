@@ -1,15 +1,15 @@
 colwash   ldx #$27        ; load x-register with #$27 to work through 0-39 iterations
           lda color+$27   ; init accumulator with the last color from first color table
 
-cycle1    ldy color-1,x   ; use y-register to remember color at next position in iteration
-          sta color-1,x   ; write the stored color from accumulator to that location
-          sta $d990,x     ; put it into Color Ram
+cycle1    ldy color-1,x   ; remember the current color in color table in this iteration
+          sta color-1,x   ; overwrite that location with color from accumulator
+          sta $d990,x     ; put it into Color Ram into column x
           tya             ; transfer our remembered color back to accumulator
-          dex             ; decrement x-Register to go to next iteration
+          dex             ; decrement x-register to go to next iteration
           bne cycle1      ; repeat if there are iterations left
           sta color+$27   ; otherwise store te final color into accumulator
           sta $d990       ; ... and into Color Ram
-                          ; do the reverse for the second line of text in the intro
+                          
 colwash2  ldx #$00        ; load x-register with #$00 to track iterations
           lda color2+$27  ; load the last color from the second table
 
