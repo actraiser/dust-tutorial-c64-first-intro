@@ -1,0 +1,17 @@
+color	= $c094
+irq	= $c038	; ?
+clear	= $c0ec
+sid_play	= $1006
+colwash	= $c120	; ?
+cycle1	= $c125
+cycle2	= $c13d
+address_music	= $1000
+colwash2	= $c138	; unused
+color2	= $c0bc
+init_text	= $c10c	; ?
+sid_init	= $1000	; ?
+loop_text	= $c10e
+line2	= $c06c
+line1	= $c044
+init_screen	= $c0e4	; ?
+play_music	= $c153	; ?
